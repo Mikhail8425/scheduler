@@ -7,7 +7,7 @@ export default function useVisualMode(initial) {
   const [mode, setMode] = useState(initial);
   const [history, setHistory] = useState([initial]);
 
-  //transition from mode to mode
+  //transition from mode to mode when trying to make an appointment
   function transition(nextMode, replace = false) {
     console.log('transition called');
     if(replace){
@@ -18,7 +18,7 @@ export default function useVisualMode(initial) {
       }
       setMode(nextMode);
   }
-  //going back to previous mode
+  //called when cancel button is clicked when trying to make an appointment
   function back() {
     console.log('back called');
     if(history.length > 1) {

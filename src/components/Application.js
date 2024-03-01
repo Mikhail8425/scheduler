@@ -14,6 +14,7 @@ import DayList from "components/DayList";
 import Appointment from "components/Appointment";
 
 export default function Application(props) {
+  console.log('Application props', props);
   const {
     state,
     setDay,
